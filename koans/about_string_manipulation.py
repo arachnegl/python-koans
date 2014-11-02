@@ -1,5 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+This file contains some bonus koans.
+
+They delve into regular expressions, an important topic but beyond
+the scope of this project.
+
+If you do want to rise to the challenge come back to these after
+completing the rest of the koans.
+
+Simply delete or comment out the @skip line.
+"""
 
 from unittest import skip
 
