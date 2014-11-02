@@ -15,7 +15,7 @@ from koans.about_asserts import AboutAsserts
 #from koans.about_tuples import AboutTuples
 #from koans.about_methods import AboutMethods
 #from koans.about_control_statements import AboutControlStatements
-#from koans.about_true_and_false import AboutTrueAndFalse
+from koans.about_true_and_false import OnTruthAndFalseness
 #from koans.about_sets import AboutSets
 #from koans.about_triangle_project import AboutTriangleProject
 #from koans.about_exceptions import AboutExceptions
@@ -58,7 +58,7 @@ def koans():
     #suite.addTests(loader.loadTestsFromTestCase(AboutTuples))
     #suite.addTests(loader.loadTestsFromTestCase(AboutMethods))
     #suite.addTests(loader.loadTestsFromTestCase(AboutControlStatements))
-    #suite.addTests(loader.loadTestsFromTestCase(AboutTrueAndFalse))
+    suite.addTests(loader.loadTestsFromTestCase(OnTruthAndFalseness))
     #suite.addTests(loader.loadTestsFromTestCase(AboutSets))
     #suite.addTests(loader.loadTestsFromTestCase(AboutTriangleProject))
     #suite.addTests(loader.loadTestsFromTestCase(AboutExceptions))
