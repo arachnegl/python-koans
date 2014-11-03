@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from runner.koan import Koan, __
+import unittest
+from runner.koan import __
 
 
-class AboutStrings(Koan):
+class AboutStrings(unittest.TestCase):
 
     # Equivalent ways of creating string objects
 

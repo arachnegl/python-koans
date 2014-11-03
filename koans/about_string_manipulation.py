@@ -12,12 +12,12 @@ completing the rest of the koans.
 Simply delete or comment out the @skip line.
 """
 
-from unittest import skip
+import unittest
 
-from runner.koan import Koan, __
+from runner.koan import __
 
 
-class AboutStringManipulation(Koan):
+class AboutStringManipulation(unittest.TestCase):
 
     def test_use_format_to_interpolate_variables(self):
 
@@ -77,13 +77,13 @@ class AboutStringManipulation(Koan):
         self.assertEqual(__, 'guido van rossum'.title())
         self.assertEqual(__, 'ToTaLlY aWeSoMe'.swapcase())
 
-    @skip('Bonus')
+    @unittest.skip('Bonus')
     def test_single_characters_can_be_represented_by_integers(self):
 
         self.assertEqual(__, ord('a'))
         self.assertEqual(__, ord('b') == (ord('a') + 1))
 
-    @skip('Bonus')
+    @unittest.skip('Bonus')
     def test_strings_can_be_split_with_different_patterns(self):
 
         import re
@@ -97,7 +97,7 @@ class AboutStringManipulation(Koan):
 
         # Pattern is a Python regular expression pattern which matches ',' or ';'
 
-    @skip('Bonus')
+    @unittest.skip('Bonus')
     def test_raw_strings_do_not_interpret_escape_characters(self):
         string = r'\n'
         self.assertNotEqual('\n', string)
@@ -106,7 +106,7 @@ class AboutStringManipulation(Koan):
 
         # Useful in regular expressions, file paths, URLs, etc.
 
-    @skip('Bonus')
+    @unittest.skip('Bonus')
     def test_strings_can_be_split_with_different_patterns(self):
 
         import re

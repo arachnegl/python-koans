@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from runner.koan import Koan, __
+import unittest
+from runner.koan import __
 
 
 def is_true(condition):
@@ -12,7 +13,7 @@ def is_true(condition):
         return 'false stuff'
 
 
-class OnTruthAndFalseness(Koan):
+class OnTruthAndFalseness(unittest.TestCase):
 
     # All the following are considered False
 

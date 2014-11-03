@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from runner.koan import Koan, __, _____
+import unittest
+
+from runner.koan import __, _____
 
 
-class AboutAsserts(Koan):
+class AboutAsserts(unittest.TestCase):
 
     def test_assert_truth(self):
 
