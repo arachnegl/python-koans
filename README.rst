@@ -27,9 +27,9 @@ Downloading Python Koans
 
 Python Koans is available through git on Github:
 
-    http://github.com/gregmalcolm/python_koans
+    http://github.com/arachnegl/python-koans
 
-Either site will allow you to download the source as a zip/gz/bz2.
+You download the source as a zip/gz/bz2.
 
 
 Installing Python
@@ -87,10 +87,8 @@ fire up the command line, recreate the scenario and run queries:
 .. image:: http://i442.photobucket.com/albums/qq150/gregmalcolm/DebuggingPython.png
 
 
-Testing a specific koan
-=======================
-
-This will help when adding/modifing koans
+Testing specific koans
+======================
 
 Running a whole test case::
 
@@ -98,42 +96,18 @@ Running a whole test case::
 
 Running a single test::
 
-  $ python contemplate_koans.py about_strings.AboutStrings.test_triple_quoted_strings_need_less_escaping
-
-
-Getting the Most From the Koans
--------------------------------
-
-Quoting the Ruby Koans instructions::
-
-	"In test-driven development the mantra has always been, red, green,
-	refactor. Write a failing test and run it (red), make the test pass
-	(green), then refactor it (that is look at the code and see if you
-	can make it any better). In this case you will need to run the koan
-	and see it fail (red), make the test pass (green), then take a
-	moment and reflect upon the test to see what it is teaching you
-	and improve the code to better communicate its intent (refactor)."
-
-
-Finding More Koan Projects
---------------------------
-
-* Github koan projects:
-    https://github.com/search?q=koans&ref=cmdform
-
-* Bitbucket koan projects:
-    https://bitbucket.org/repo/all?name=koans
+  $ python3 contemplate_koans.py about_strings.AboutStrings.test_triple_quoted_strings_need_less_escaping
 
 
 Acknowledgments
 ---------------
 
-I have lifted a lot from Greg Malcom. In fact this project reuses all the
-testing infrastructure from:
+Most of this is lifted from Greg Malcom:
 
     http://github.com/gregmalcolm/python_koans
+
+I highly recommend completing Malcom's Koans once you have completed these.
 
 I chose not to fork as I wanted a version suitable for students of a non
 programming background.
 
-I highly recommend completing Malcom's Koans once you have completed these.
