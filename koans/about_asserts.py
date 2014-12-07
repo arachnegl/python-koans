@@ -3,14 +3,14 @@
 
 import unittest
 
-from runner.koan import __, _____
+__ = False
 
 
 class AboutAsserts(unittest.TestCase):
 
     def test_assert_truth(self):
 
-        assert _____  # This should be true
+        assert False  # replace with True
 
     def test_equality(self):
 
