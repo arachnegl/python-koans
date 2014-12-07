@@ -19,7 +19,7 @@ class AboutStrings(unittest.TestCase):
 
         string = "Hello, world."
 
-        assert isinstance(__, str)
+        assert isinstance(string, str)
 
     def test_single_quoted_strings_are_also_strings(self):
 
