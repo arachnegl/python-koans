@@ -8,18 +8,18 @@ __ = False
 
 class AboutStrings(unittest.TestCase):
 
-    # Equivalent ways of creating string objects
+    ###########################
+    # Creating String Objects #
+    ###########################
 
-    # These are also referred to as string literals
-    # as they are literally short cuts for:
-    # >>> str('a string')
-    # 'a string'
+    # Also referred to as literals as they literally represent
+    # objects of type str
 
     def test_double_quoted_strings_are_strings(self):
 
         string = "Hello, world."
 
-        assert isinstance(string, str)
+        assert isinstance(__, str)
 
     def test_single_quoted_strings_are_also_strings(self):
 
@@ -27,19 +27,31 @@ class AboutStrings(unittest.TestCase):
 
         assert isinstance(__, str)
 
+    def test_use_backslash_to_escape_quotes_meant_for_string(self):
+
+        string = "He said, \"Go Away.\""
+
+        # create equivalent string object by using syntax from next test
+        assert __ == string
+
     def test_use_single_quotes_to_create_string_with_double_quotes(self):
 
         string = 'He said, "Go Away."'
 
+        # use '\' to create equivalent string object
         assert __ == string
 
     def test_use_double_quotes_to_create_strings_with_single_quotes(self):
 
         string = "Don't"
 
+        # use '\' to create equivalent string object
         assert __ == string
 
-    # String methods and operations
+
+    #################################
+    # String methods and operations #
+    #################################
 
     def test_plus_concatenates_strings(self):
 
