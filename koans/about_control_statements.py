@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from runner.koan import __
+
+__ = None
 
 
 class AboutControlStatements(unittest.TestCase):
@@ -14,7 +15,7 @@ class AboutControlStatements(unittest.TestCase):
         else:
             result = 'false value'
 
-        self.assertEqual(__, result)
+        assert __ == result
 
     def test_if_then(self):
 
@@ -23,7 +24,7 @@ class AboutControlStatements(unittest.TestCase):
         if True:
             result = 'true value'
 
-        self.assertEqual(__, result)
+        assert __ == result
 
     def test_if_then_elif_else(self):
 
@@ -34,7 +35,7 @@ class AboutControlStatements(unittest.TestCase):
         else:
             result = 'default value'
 
-        self.assertEqual(__, result)
+        assert __ == result
 
     def test_while(self):
 
@@ -44,7 +45,7 @@ class AboutControlStatements(unittest.TestCase):
             result = result * i
             i += 1
 
-        self.assertEqual(__, result)
+        assert __ == result
 
     def test_while_with_break(self):
 
@@ -56,7 +57,7 @@ class AboutControlStatements(unittest.TestCase):
             result = result * i
             i += 1
 
-        self.assertEqual(__, result)
+        assert __ == result
 
     def test_while_with_continue(self):
 
@@ -68,7 +69,7 @@ class AboutControlStatements(unittest.TestCase):
                 continue
             result.append(i)
 
-        self.assertEqual(__, result)
+        assert __ == result
 
     def test_for(self):
 
@@ -78,25 +79,25 @@ class AboutControlStatements(unittest.TestCase):
         for word in phrase:
             result.append(word.upper())
 
-        self.assertEqual([__, __, __], result)
+        assert [__, __, __] == result
 
     def test_for_with_tuples(self):
 
         round_table = [
-            ("Lancelot", "Blue"),
-            ("Galahad", "I don't know!"),
-            ("Robin", "Blue! I mean Green!"),
-            ("Arthur", "Is that an African Swallow or Amazonian Swallow?"),
+            ["Lancelot", "Blue"],
+            ["Galahad", "I don't know!"],
+            ["Robin", "Blue! I mean Green!"],
+            ["Arthur", "Is that an African Swallow or Amazonian Swallow?"],
         ]
 
         result = []
         for knight, answer in round_table:
             result.append("Contestant: '" + knight + "' Answer: '" + answer + "'")
 
-        self.assertEqual(result[0], __)
-        self.assertEqual(result[1], __)
-        self.assertEqual(result[2], __)
-        self.assertEqual(result[3], __)
+        assert result[0] == __
+        assert result[1] == __
+        assert result[2] == __
+        assert result[3] == __
 
     def test_for_with_conditional(self):
 
@@ -112,4 +113,4 @@ class AboutControlStatements(unittest.TestCase):
             if age > 1941:
                 born_after_1941.append(comedian)
 
-        self.assertEqual(born_after_1941, __)
+        assert born_after_1941 == __
