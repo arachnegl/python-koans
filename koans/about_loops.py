@@ -6,70 +6,7 @@ import unittest
 __ = None
 
 
-class AboutControlStatements(unittest.TestCase):
-
-    def test_if_then_else(self):
-
-        if True:
-            result = 'true value'
-        else:
-            result = 'false value'
-
-        assert __ == result
-
-    def test_if_then(self):
-
-        result = 'default value'
-
-        if True:
-            result = 'true value'
-
-        assert __ == result
-
-    def test_if_then_elif_else(self):
-
-        if False:
-            result = 'first value'
-        elif True:
-            result = 'true value'
-        else:
-            result = 'default value'
-
-        assert __ == result
-
-    def test_while(self):
-
-        i = 1
-        result = 1
-        while i <= 10:
-            result = result * i
-            i += 1
-
-        assert __ == result
-
-    def test_while_with_break(self):
-
-        i = 1
-        result = 1
-        while True:
-            if i > 10:
-                break
-            result = result * i
-            i += 1
-
-        assert __ == result
-
-    def test_while_with_continue(self):
-
-        i = 0
-        result = []
-        while i < 10:
-            i += 1
-            if (i % 2) == 0:
-                continue
-            result.append(i)
-
-        assert __ == result
+class AboutLoopStatements(unittest.TestCase):
 
     def test_for(self):
 
@@ -114,3 +51,37 @@ class AboutControlStatements(unittest.TestCase):
                 born_after_1941.append(comedian)
 
         assert born_after_1941 == __
+
+    def test_while(self):
+
+        i = 1
+        result = 1
+        while i <= 10:
+            result = result * i
+            i += 1
+
+        assert __ == result
+
+    def test_while_with_break(self):
+
+        i = 1
+        result = 1
+        while True:
+            if i > 10:
+                break
+            result = result * i
+            i += 1
+
+        assert __ == result
+
+    def test_while_with_continue(self):
+
+        i = 0
+        result = []
+        while i < 10:
+            i += 1
+            if (i % 2) == 0:
+                continue
+            result.append(i)
+
+        assert __ == result
