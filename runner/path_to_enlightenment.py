@@ -14,7 +14,7 @@ from koans.about_dictionaries import AboutDictionaries
 #from koans.about_tuples import AboutTuples
 #from koans.about_methods import AboutMethods
 from koans.about_conditionals import AboutConditionalStatements
-from koans.about_true_and_false import OnTruthAndFalseness
+#from koans.about_true_and_false import OnTruthAndFalseness
 from koans.about_loops import AboutLoopStatements
 #from koans.about_sets import AboutSets
 #from koans.about_triangle_project import AboutTriangleProject
@@ -49,7 +49,6 @@ def koans():
         AboutAsserts,
         AboutStrings,
         AboutStringManipulation,
-        OnTruthAndFalseness,
         AboutConditionalStatements,
         AboutLists,
         AboutDictionaries,
