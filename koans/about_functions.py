@@ -15,13 +15,6 @@ class AboutFunctions(unittest.TestCase):
 
         assert say_hi() == 'hi'
 
-    def test_function_object_type(self):
-
-        def say_hi():
-            return 'hi'
-
-        assert type(say_hi) == __
-
     def test_write_concatenation_function(self):
 
         # Lets represent every day of the year with an integer
@@ -66,10 +59,15 @@ class AboutFunctions(unittest.TestCase):
 
         assert get_age_in_2050(34) == 70
 
+
+    ##############################
+    # Conversion functions
+    ##############################
+
     def test_write_convert_to_celsius_function(self):
 
         # To calculate celsius from fahrenheit:
-        # Subtract 35 from fahrenheit, then
+        # Subtract 32 from fahrenheit, then
         # multiply the result by 5 and divide by 9
 
         # Use int() to round down to the closest integer.
@@ -80,4 +78,13 @@ class AboutFunctions(unittest.TestCase):
             return None
 
         assert convert_to_celsius(80) == 26
+    def test_write_convert_kilometers_to_miles_function(self):
 
+        # one mile is equal to 1.6 kilometers
+
+        def convert_to_miles(kilometers):
+            # Enter your code here
+            return False
+
+        miles = convert_to_miles(34)
+        self.assertAlmostEqual(miles, 54.4, 1)
