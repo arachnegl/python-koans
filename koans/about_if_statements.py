@@ -6,7 +6,7 @@ import unittest
 __ = None
 
 
-class AboutConditionalStatements(unittest.TestCase):
+class AboutIfStatements(unittest.TestCase):
 
     def test_if_then_else(self):
 
