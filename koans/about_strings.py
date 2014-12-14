@@ -19,13 +19,13 @@ class AboutStrings(unittest.TestCase):
 
         string = "Hello, world."
 
-        assert isinstance(__, str)
+        assert type(__) == str
 
     def test_single_quoted_strings_are_also_strings(self):
 
         string = 'Goodbye, world.'
 
-        assert isinstance(__, str)
+        assert type(__) == str
 
     def test_use_backslash_to_escape_quotes_meant_for_string(self):
 
