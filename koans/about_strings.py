@@ -15,43 +15,11 @@ class AboutStrings(unittest.TestCase):
     # Also referred to as literals as they literally represent
     # objects of type str
 
-    def test_double_quoted_strings_are_strings(self):
+    def test_create_string_with_double_quotes(self):
 
         string = "Hello, world."
 
-        assert type(__) == str
-
-    def test_single_quoted_strings_are_also_strings(self):
-
-        string = 'Goodbye, world.'
-
-        assert type(__) == str
-
-    def test_use_backslash_to_escape_quotes_meant_for_string(self):
-
-        string = "He said, \"Go Away.\""
-
-        # create equivalent string object by using syntax from next test
-        assert __ == string
-
-    def test_use_single_quotes_to_create_string_with_double_quotes(self):
-
-        string = 'He said, "Go Away."'
-
-        # use '\' to create equivalent string object
-        assert __ == string
-
-    def test_use_double_quotes_to_create_strings_with_single_quotes(self):
-
-        string = "Don't"
-
-        # use '\' to create equivalent string object
-        assert __ == string
-
-
-    #################################
-    # String methods and operations #
-    #################################
+        assert type(string) == __
 
     def test_plus_concatenates_strings(self):
 
@@ -69,16 +37,42 @@ class AboutStrings(unittest.TestCase):
         assert __ == there
         assert __ == string
 
-    def test_plus_equals_will_append_to_end_of_string(self):
-
-        hi = "Hello, "
-        there = "world"
-        hi += there
-
-        assert __ == hi
-
     def test_len_returns_length_of_string(self):
 
         hi = "hi"
 
         assert __ == len(hi)
+
+    def test_strings_can_change_case(self):
+
+        assert __ == 'guido'.capitalize()
+        assert __ == 'guido'.upper()
+        assert __ == 'TimBot'.lower()
+        assert __ == 'guido van rossum'.title()
+        assert __ == 'ToTaLlY aWeSoMe'.swapcase()
+
+    def test_you_can_get_a_substring_from_a_string(self):
+
+        string = "Bacon, lettuce and tomato"
+
+        assert __ == string[7:10]
+
+    def test_you_can_get_a_single_character_from_a_string(self):
+
+        string = "Bacon, lettuce and tomato"
+
+        assert __ == string[1]
+
+    def test_strings_can_be_split(self):
+
+        string = "Sausage Egg Cheese"
+        words = string.split()
+
+        assert [__, __, __] == words
+
+    def test_strings_can_be_joined(self):
+
+        words = ["Now", "is", "the", "time"]
+
+        assert __ == ' '.join(words)
+
