@@ -7,7 +7,7 @@ import unittest
 
 from koans.about_asserts import AboutAsserts
 from koans.about_strings import AboutStrings
-from koans.about_string_manipulation import AboutStringManipulation
+#from koans.about_string_manipulation import AboutStringManipulation
 #from koans.about_none import AboutNone
 from koans.about_lists import AboutLists
 from koans.about_dictionaries import AboutDictionaries
@@ -48,7 +48,6 @@ def koans():
     koans = [
         AboutAsserts,
         AboutStrings,
-        AboutStringManipulation,
         AboutLists,
         AboutDictionaries,
         AboutLoopStatements,
