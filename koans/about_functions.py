@@ -17,16 +17,6 @@ class AboutFunctions(unittest.TestCase):
 
     def test_write_concatenation_function(self):
 
-        # Lets represent every day of the year with an integer
-        # The first of January is 1
-        # The second of January is 2
-        # ...and so on till...
-        # The the last day of December is 365
-        # (We ignore leap years)
-
-        # Using this representation write a function that gives the
-        # day difference between two dates
-
         def concatenate(string1, string2):
             # Enter your code here
             return None
@@ -78,6 +68,7 @@ class AboutFunctions(unittest.TestCase):
             return None
 
         assert convert_to_celsius(80) == 26
+
     def test_write_convert_kilometers_to_miles_function(self):
 
         # one mile is equal to 1.6 kilometers
