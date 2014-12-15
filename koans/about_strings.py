@@ -63,16 +63,15 @@ class AboutStrings(unittest.TestCase):
 
         assert __ == string[1]
 
-    def test_strings_can_be_split(self):
+    def test_list_of_strings_can_be_joined(self):
 
-        string = "Sausage Egg Cheese"
-        words = string.split()
-
-        assert [__, __, __] == words
-
-    def test_strings_can_be_joined(self):
-
-        words = ["Now", "is", "the", "time"]
+        words = ["Sausage", "Egg", "Cheese"]  # This is a python list
 
         assert __ == ' '.join(words)
 
+    def test_strings_can_be_split(self):
+
+        string = "Sausage Egg Cheese"
+        words = string.split(' ')   # note ' ' signifies whitespace
+
+        assert [__, __, __] == words
