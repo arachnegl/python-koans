@@ -8,17 +8,19 @@ __ = False
 
 class AboutStrings(unittest.TestCase):
 
-    ###########################
-    # Creating String Objects #
-    ###########################
-
-    # Also referred to as literals as they literally represent
-    # objects of type str
 
     def test_create_string_with_double_quotes(self):
 
         string = "Hello, world."
 
+        # assert that the type of string is str:
+        assert __ == str
+
+    def test_create_string_out_of_an_integer(self):
+
+        string = str(123)
+
+        # assert that the type of string is str:
         assert type(string) == __
 
     def test_plus_concatenates_strings(self):
@@ -63,15 +65,9 @@ class AboutStrings(unittest.TestCase):
 
         assert __ == string[1]
 
-    def test_list_of_strings_can_be_joined(self):
+    def test_if_a_string_contains_another_string(self):
 
-        words = ["Sausage", "Egg", "Cheese"]  # This is a python list
+        string = "Bacon, lettuce and tomato"
+        is_lettuce_in = "lettuce" in string
 
-        assert __ == ' '.join(words)
-
-    def test_strings_can_be_split(self):
-
-        string = "Sausage Egg Cheese"
-        words = string.split(' ')   # note ' ' signifies whitespace
-
-        assert [__, __, __] == words
+        assert is_lettuce_in == __

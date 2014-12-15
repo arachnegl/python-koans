@@ -8,20 +8,11 @@ __ = False
 
 class AboutIntegers(unittest.TestCase):
 
-    def test_integer_creation_using_literal(self):
+    def test_integer_creation(self):
 
         an_integer = 5
 
         assert type(an_integer) == __
-
-    def test_integer_creation_using_constructor(self):
-
-        an_integer = int(5)
-
-        assert type(an_integer) == __
-
-        # This is more verbose. Here we are just proving a point.
-        # In practice it is never used.
 
     def test_integer_constructor_useful_for_converting_from_string(self):
 
