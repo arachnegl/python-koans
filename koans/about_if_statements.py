@@ -8,31 +8,55 @@ __ = None
 
 class AboutIfStatements(unittest.TestCase):
 
-    def test_if_then_else(self):
+    def test_if_statement_one(self):
+
+        result = 'original'
 
         if True:
-            result = 'true value'
-        else:
-            result = 'false value'
+            result = 'updated'
 
         assert __ == result
 
-    def test_if_then(self):
+    def test_if_statement_two(self):
 
-        result = 'default value'
+        result = 'original'
+
+        if False:
+            result = 'updated'
+
+        assert __ == result
+
+    def test_if_else_one(self):
+
+        result = 'original'
 
         if True:
-            result = 'true value'
+            result = 'updated by True branch'
+        else:
+            result = 'updated by False branch'
+
+        assert __ == result
+
+    def test_if_else_two(self):
+
+        result = 'original'
+
+        if False:
+            result = 'updated by True branch'
+        else:
+            result = 'updated by False branch'
 
         assert __ == result
 
     def test_if_then_elif_else(self):
 
-        if False:
-            result = 'first value'
-        elif True:
-            result = 'true value'
+        vowels = 'aeiou'
+
+        letter = 'f'
+
+        if letter in vowels:
+            result = 'is vowel'
         else:
-            result = 'default value'
+            result = 'not vowel'
 
         assert __ == result
