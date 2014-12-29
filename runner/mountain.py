@@ -13,8 +13,8 @@ class Mountain:
 
     def __init__(self):
         self.stream = WritelnDecorator(sys.stdout)
-        self.tests = path_to_enlightenment.koans()
-        self.lesson = Sensei(self.stream)
+        self.tests = path_to_enlightenment.koans()   # unittest Suite
+        self.lesson = Sensei(self.stream)   # TestResult
 
     def walk_the_path(self, args=None):
         "Run the koans tests with a custom runner output."

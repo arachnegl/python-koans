@@ -80,8 +80,59 @@ class Sensei(MockableTestResult):
         else:
             return None
 
+    @staticmethod
+    def _to_payload_failures(failures):
+
+        transformed = [
+            {
+                'test': str(f[0]),
+                'traceback': f[1],
+            }
+            for f in failures
+        ]
+
+        return transformed
+
+
+        return jsonified
+
+    def _get_post_report(self):
+
+        report = {
+            'failures': self._to_payload_failures(self.failures),
+            'pass_count': self.pass_count,
+            'lessons': self.filter_all_lessons(),
+            'id': 'student A',
+        }
+
+        return report
+
+    def _post_report(self, destination):
+        # TODO wrap this up in a Thread
+
+        report = self._get_post_report()
+
+        import json
+        jsonified = dict([
+            (key, json.dumps(value))
+            for key, value in report.items()
+        ])
+
+        from urllib import request
+        from urllib.parse import urlencode
+
+        data = bytes(urlencode(jsonified), 'utf8')
+
+        try:
+            request.urlopen(destination, data=data)
+        except Exception as exc:
+            print(exc)
+            # We never want this post request to stop the fun
+            pass
+
     def learn(self):
         self.errorReport()
+        self._post_report('http://localhost:8000')
 
         self.stream.writeln("")
         self.stream.writeln("")
@@ -257,6 +308,7 @@ class Sensei(MockableTestResult):
         return self.tests.countTestCases()
 
     def filter_all_lessons(self):
+    §1q
         cur_dir = os.path.split(os.path.realpath(__file__))[0]
         if not self.all_lessons:
             self.all_lessons = glob.glob('{0}/../koans/about*.py'.format(cur_dir))
