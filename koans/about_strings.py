@@ -2,79 +2,32 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from runner.koan import __
+
+__ = False
 
 
 class AboutStrings(unittest.TestCase):
 
-    # Equivalent ways of creating string objects
 
-    # These are also referred to as string literals
-    # as they are literally short cuts for:
-    # >>> str('a string')
-    # 'a string'
-
-    def test_double_quoted_strings_are_strings(self):
+    def test_create_string_with_double_quotes(self):
 
         string = "Hello, world."
 
-        self.assertEqual(__, isinstance(string, str))
+        # assert that the type of string is str:
+        assert __ == str
 
-    def test_single_quoted_strings_are_also_strings(self):
+    def test_create_string_out_of_an_integer(self):
 
-        string = 'Goodbye, world.'
+        string = str(123)
 
-        self.assertEqual(__, isinstance(string, str))
-
-    def test_triple_quote_strings_are_also_strings(self):
-
-        string = """Howdy, world!"""
-
-        self.assertEqual(__, isinstance(string, str))
-
-
-    # How to create strings that contain quotes
-
-    def test_use_single_quotes_to_create_string_with_double_quotes(self):
-
-        string = 'He said, "Go Away."'
-
-        self.assertEqual(__, string)
-
-    def test_use_double_quotes_to_create_strings_with_single_quotes(self):
-
-        string = "Don't"
-
-        self.assertEqual(__, string)
-
-    def test_use_backslash_for_escaping_quotes_in_strings(self):
-
-        a = "He said, \"Don't\""
-        b = 'He said, "Don\'t"'
-
-        self.assertEqual(__, (a == b))
-
-    def test_triple_quoted_strings_need_less_escaping(self):
-
-        a = "Hello \"world\"."
-        b = """Hello "world"."""
-
-        self.assertEqual(__, (a == b))
-
-
-    # Functions & String methods
+        # assert that the type of string is str:
+        assert type(string) == __
 
     def test_plus_concatenates_strings(self):
 
         string = "Hello, " + "world"
 
-        self.assertEqual(__, string)
-
-    def test_adjacent_strings_are_concatenated_automatically(self):
-
-        string = "Hello" ", " "world"
-
-        self.assertEqual(__, string)
+        assert __ == string
 
     def test_plus_will_not_modify_original_strings(self):
 
@@ -82,19 +35,39 @@ class AboutStrings(unittest.TestCase):
         there = "world"
         string = hi + there
 
-        self.assertEqual(__, hi)
-        self.assertEqual(__, there)
-
-    def test_plus_equals_will_append_to_end_of_string(self):
-
-        hi = "Hello, "
-        there = "world"
-        hi += there
-
-        self.assertEqual(__, hi)
+        assert __ == hi
+        assert __ == there
+        assert __ == string
 
     def test_len_returns_length_of_string(self):
 
         hi = "hi"
 
-        self.assertEqual(__, len(hi))
+        assert __ == len(hi)
+
+    def test_strings_can_change_case(self):
+
+        assert __ == 'guido'.capitalize()
+        assert __ == 'guido'.upper()
+        assert __ == 'TimBot'.lower()
+        assert __ == 'guido van rossum'.title()
+        assert __ == 'ToTaLlY aWeSoMe'.swapcase()
+
+    def test_you_can_get_a_substring_from_a_string(self):
+
+        string = "Bacon, lettuce and tomato"
+
+        assert __ == string[7:10]
+
+    def test_you_can_get_a_single_character_from_a_string(self):
+
+        string = "Bacon, lettuce and tomato"
+
+        assert __ == string[1]
+
+    def test_if_a_string_contains_another_string(self):
+
+        string = "Bacon, lettuce and tomato"
+        is_lettuce_in = "lettuce" in string
+
+        assert is_lettuce_in == __
