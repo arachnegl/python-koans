@@ -8,7 +8,7 @@ __ = None
 
 class AboutLoopStatements(unittest.TestCase):
 
-    def test_for(self):
+    def test_building_a_new_transformed_list(self):
 
         phrase = ["fish", "and", "chips"]
 
@@ -18,7 +18,7 @@ class AboutLoopStatements(unittest.TestCase):
 
         assert [__, __, __] == result
 
-    def test_for_with_tuples(self):
+    def test_building_a_new_transformed_list_again(self):
 
         round_table = [
             ["Lancelot", "Blue"],
@@ -36,7 +36,7 @@ class AboutLoopStatements(unittest.TestCase):
         assert result[2] == __
         assert result[3] == __
 
-    def test_for_with_conditional(self):
+    def test_for_with_conditional_filters_a_list(self):
 
         pythons = [
             ("John Cleese", 1939),
@@ -57,8 +57,8 @@ class AboutLoopStatements(unittest.TestCase):
         i = 1
         result = 1
         while i <= 10:
-            result = result * i
-            i += 1
+            result = result + i
+            i = i + 1
 
         assert __ == result
 
@@ -69,8 +69,8 @@ class AboutLoopStatements(unittest.TestCase):
         while True:
             if i > 10:
                 break
-            result = result * i
-            i += 1
+            result = result + i
+            i = i + 1
 
         assert __ == result
 
@@ -79,7 +79,7 @@ class AboutLoopStatements(unittest.TestCase):
         i = 0
         result = []
         while i < 10:
-            i += 1
+            i = i + 1
             if (i % 2) == 0:
                 continue
             result.append(i)
