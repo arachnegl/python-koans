@@ -45,6 +45,27 @@ class AboutStrings(unittest.TestCase):
 
         assert __ == len(hi)
 
+    def test_strings_can_be_split(self):
+
+        string = "Sausage Egg Cheese"
+        words = string.split()
+
+        assert [__, __, __] == words
+
+    def test_strings_can_be_joined(self):
+
+        words = ["Now", "is", "the", "time"]
+
+        assert __ == ' '.join(words)
+
+    def test_use_format_to_interpolate_variables(self):
+
+        value1 = 'one'
+        value2 = 2
+        string = "The values are {0} and {1}".format(value1, value2)
+
+        assert __ == string
+
     def test_strings_can_change_case(self):
 
         assert __ == 'guido'.capitalize()
@@ -61,13 +82,17 @@ class AboutStrings(unittest.TestCase):
 
     def test_you_can_get_a_single_character_from_a_string(self):
 
-        string = "Bacon, lettuce and tomato"
+        string = "pears, lettuce and tomato"
 
         assert __ == string[1]
 
     def test_if_a_string_contains_another_string(self):
 
-        string = "Bacon, lettuce and tomato"
+        string = "Pears, lettuce and tomato"
         is_lettuce_in = "lettuce" in string
 
         assert is_lettuce_in == __
+
+        is_dog_in = "dog" in string
+
+        assert is_dog_in == __
